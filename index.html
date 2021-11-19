@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Direct Debit Email Template</title>
+    <link href="https://www.jsdelivr.com/package/npm/font-proxima-nova" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        color: #000000;
+        font-family: sans-serif;
+      }
+      body {
+        background: #f5f6fa;
+        font-family: "font-proxima-nova", sans-serif;
+        position: relative;
+        padding: 3rem 0.5rem;
+        min-height: 80vh;
+      }
+      p {
+        line-height: 2;
+      }
+      .email-body {
+        padding: 3rem;
+        border-radius: 16px;
+        padding-bottom: 0rem;
+      }
+      .container {
+        max-width: 900px;
+        width: 100%;
+        margin: auto;
+        height: max-content;
+        background: #ffffff;
+        border-top-right-radius: 16px;
+        border-top-left-radius: 16px;
+      }
+      .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+      }
+      .tg td,
+      .tg th {
+        border-width: 0px;
+        overflow: hidden;
+        padding: 10px 0px;
+        word-break: normal;
+      }
+      .tg .tg-0lax {
+        vertical-align: middle;
+      }
+      .email-logo {
+        width: auto;
+        margin-top: 1.5rem;
+        height: 32px;
+      }
+      .main-img {
+        height: 200px;
+        width: auto;
+        margin: auto;
+        display: block;
+      }
+      .font-18 {
+        font-size: 16px;
+        margin-top: 2.8rem;
+        margin-bottom: 3rem;
+        font-weight: 400;
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+      .font-16 {
+        font-size: 12px;
+        font-weight: 400;
+      }
+      .font-24 {
+        font-size: 24px;
+        line-height: 36px;
+      }
+      .middle-box {
+        border: none;
+        border-width: 1px !important;
+        border-right: 1px solid #ffffff;
+        border-left: 1px solid #ffffff;
+        padding: 0.2rem 1rem;
+      }
+      .middle-box span {
+        width: max-content;
+        margin: auto;
+        text-align: left;
+        display: block;
+      }
+      .payroll-item {
+        padding: 1rem !important;
+      }
+      .email-month {
+        background: #f5f6fa;
+        border-radius: 12px;
+        padding: 1.8rem;
+      }
+      .font-18-2 {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 32px;
+        margin-bottom: 2.2rem;
+
+        padding-left: 5rem;
+        padding-right: 5rem;
+      }
+      .font-20 {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+      }
+      .font-30 {
+        font-size: 32px;
+        font-weight: 700;
+      }
+      .email-footer {
+        padding: 1.7rem 1rem;
+        text-align: center;
+        background-color: #0047cc;
+        border-radius: 16px 16px 0px 0px;
+        color: #ffffff;
+        margin-top: 1.8rem;
+        font-size: 16px;
+      }
+      .custom-m {
+        margin-bottom: 2.1rem;
+        margin-top: 3.6rem;
+      }
+      .chip {
+        background: #25ad25;
+        border-radius: 16px;
+        padding: 0.4rem 0.8rem;
+        color: white;
+        margin-left: 1rem;
+      }
+      .background-p {
+        background-color: #0047cc;
+        border-radius: 12px;
+        background-image: url("https://bento-resources.s3.amazonaws.com/loan-details-background.png");
+        background-size: cover;
+        background-position: bottom right;
+      }
+      .payroll-item-variant {
+        padding: 1rem 0rem;
+      }
+      .equal-width {
+        width: 33.3%;
+      }
+      .center-item {
+        text-align: center;
+      }
+      .right-item {
+        text-align: right;
+      }
+      @media screen and (max-width: 767px) {
+        body {
+          padding-top: 4rem;
+        }
+        .email-body {
+          padding: 1rem !important;
+        }
+        .tg-wrap {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+        .equal-width {
+          width: 100% !important;
+          display: block !important;
+          text-align: left !important;
+        }
+        .center-item,
+        .right-item {
+          text-align: left !important;
+        }
+        .middle-box span {
+          width: max-content !important;
+          text-align: left !important;
+          display: inline !important;
+        }
+        .custom-m {
+          margin-bottom: 1.4rem;
+          margin-top: 2rem;
+        }
+        .middle-box {
+          border-right: transparent !important;
+          border-left: transparent !important;
+          border-top: 1px solid #ffffff !important;
+          border-bottom: 1px solid #ffffff !important;
+          padding: 0.6rem !important;
+        }
+        .payroll-item {
+          display: block;
+          padding: 0.6rem !important;
+        }
+        .font-18 {
+          font-size: 14px;
+          padding-left: 6% !important;
+          padding-right: 6% !important;
+        }
+        .font-18-2 {
+          font-size: 14px;
+          padding-left: 3rem !important;
+          padding-right: 3rem !important;
+        }
+        .font-24 {
+          font-size: 18px;
+          line-height: 30px;
+        }
+        .font-30 {
+          font-size: 22px !important;
+          padding-left: 6% !important;
+          padding-right: 6% !important;
+        }
+        .main-img {
+          height: 150px;
+        }
+        .email-footer {
+          padding: 1.3rem 1rem !important;
+          margin-top: 1.3rem !important;
+          font-size: 14px;
+        }
+        .font-18 {
+          margin-bottom: 1.5rem;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        .font-18,
+        .font-18-2,
+        .font-30 {
+          padding-left: 0rem !important;
+          padding-right: 0rem !important;
+        }
+        .email-logo {
+          margin-top: 1.2rem !important;
+          height: 28px !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="email-body">
+        <div class="tg-wrap">
+          <table class="tg">
+            <thead>
+              <tr>
+                <th class="tg-0lax" colspan="3" style="text-align: left">
+                  <img
+                    src="https://bento-resources.s3.amazonaws.com/bento-logo.png"
+                    alt="Bento-logo"
+                    class="email-logo"
+                  />
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tg-0lax d-block" colspan="3">
+                  <p
+                    style="line-height: 48px; text-align: center"
+                    class="font-30 custom-m"
+                  >
+                    Loan Offer
+                  </p>
+                  <img
+                    src="https://bento-resources.s3.amazonaws.com/loan-request-disbursed.png"
+                    alt="loan-request-success"
+                    class="main-img"
+                  />
+                  <p
+                    style="
+                      margin-top: 1.6rem;
+                      margin-bottom: 1rem;
+                      text-align: center;
+                    "
+                    class="font-24"
+                  >
+                    Hello <strong>Peter Griffin</strong> 👋🏾
+                  </p>
+                  <p
+                    style="line-height: 32px; text-align: center"
+                    class="font-18-2"
+                  >
+                    Your car loan request has now been disbursed to the car
+                    dealer. Your dream car is on its way to you 🎉
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <table class="email-month" style="width: 100%">
+                  <tr style="padding-bottom: 1rem">
+                    <th
+                      class="
+                        tg-0lax
+                        email-payroll
+                        payroll-item-variant
+                        equal-width
+                      "
+                      style="text-align: left"
+                    >
+                      <span>
+                        <p class="font-16">
+                          <strong>Car Loan Request</strong>: ₦ 2,000,000
+                        </p>
+                      </span>
+                    </th>
+                    <th
+                      class="
+                        tg-0lax
+                        payroll-item-variant
+                        center-item
+                        equal-width
+                      "
+                    >
+                      <div>
+                        <span style="color: white">
+                          <p class="font-16 center-item">
+                            <strong>Date of Request:</strong>
+                            21st June, 2021
+                          </p>
+                        </span>
+                      </div>
+                    </th>
+                    <th
+                      class="
+                        tg-0lax
+                        payroll-item-variant
+                        right-item
+                        equal-width
+                      "
+                    >
+                      <span style="color: white">
+                        <p class="font-16">
+                          <strong>Status:</strong>
+                          <span class="chip">Disbursed</span>
+                        </p>
+                      </span>
+                    </th>
+                  </tr>
+                  <tr style="padding-bottom: 1rem">
+                    <td colspan="3">
+                      <table class="background-p" style="width: 100%">
+                        <th
+                          class="tg-0lax email-payroll payroll-item equal-width"
+                          style="text-align: left"
+                        >
+                          <span style="color: white">
+                            <p
+                              style="
+                                color: white;
+                                font-size: 10px;
+                                margin-bottom: 2px;
+                              "
+                            >
+                              Repayment Duration
+                            </p>
+                            <p
+                              class="font-20"
+                              style="color: white; font-weight: 400"
+                            >
+                              10 months
+                            </p>
+                          </span>
+                        </th>
+                        <th class="tg-0lax payroll-item-variant equal-width">
+                          <div class="middle-box">
+                            <span>
+                              <p
+                                style="
+                                  color: white;
+                                  font-size: 10px;
+                                  font-weight: 400;
+                                  margin-bottom: 2px;
+                                "
+                              >
+                                Monthly Repayment
+                              </p>
+                              <p class="font-20" style="color: white">
+                                ₦ 410,000.23
+                              </p>
+                            </span>
+                          </div>
+                        </th>
+                        <th class="tg-0lax payroll-item equal-width right-item">
+                          <span>
+                            <p
+                              style="
+                                color: white;
+                                font-size: 10px;
+                                font-weight: 400;
+                                margin-bottom: 2px;
+                              "
+                            >
+                              Total Payment @2% interest
+                            </p>
+                            <p class="font-20" style="color: white">
+                              ₦ 2,110,000.23
+                            </p>
+                          </span>
+                        </th>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </tr>
+              <tr>
+                <p
+                  style="line-height: 32px; text-align: center"
+                  class="font-18"
+                >
+                  I wish you a beautiful day filled with positive energy. ⚡
+                </p>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="email-footer">
+        <table style="margin: auto">
+          <tr>
+            <th>
+              <span class="font-20" style="color: #ffffff; font-weight: 400">
+                Best regards from &nbsp;&nbsp;&nbsp;</span
+              >
+            </th>
+            <th>
+              <img
+                src="https://bento-resources.s3.amazonaws.com/bento-logo-white.png"
+                alt="logo"
+                style="height: 24px"
+              />
+            </th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
